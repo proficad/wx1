@@ -10,7 +10,8 @@ public:
 	cApp();
 	~cApp();
 
-	virtual bool OnInit();
+	virtual bool OnInit() wxOVERRIDE;
+	virtual int OnExit() wxOVERRIDE;
 
 	wxFrame* CreateChildFrame(wxView* view, bool isCanvas);
 

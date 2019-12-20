@@ -56,6 +56,17 @@ bool cApp::OnInit()
 	return true;
 }
 
+int cApp::OnExit() wxOVERRIDE
+{
+	wxDocManager* const manager = wxDocManager::GetDocumentManager();
+#if wxUSE_CONFIG
+	//9 manager->FileHistorySave(*wxConfig::Get());
+#endif // wxUSE_CONFIG
+	delete manager;
+
+	return wxApp::OnExit();
+}
+
 wxFrame* cApp::CreateChildFrame(wxView* view, bool isCanvas)
 {
 	wxFrame* subframe = NULL;
