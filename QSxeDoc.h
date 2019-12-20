@@ -5,6 +5,6 @@
 class QSxeDoc :
 	public wxDocument
 {
-
+	wxDECLARE_DYNAMIC_CLASS(QSxeDoc);
 };
 

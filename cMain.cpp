@@ -1,6 +1,6 @@
 #include "cMain.h"
 
-wxBEGIN_EVENT_TABLE(cMain, wxFrame)
+wxBEGIN_EVENT_TABLE(cMain, wxDocMDIParentFrame)
 EVT_BUTTON(10001, OnButtonClicked)
 wxEND_EVENT_TABLE()
 

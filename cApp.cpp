@@ -35,9 +35,8 @@ bool cApp::OnInit()
 	wxDocManager* docManager = new wxDocManager;
 
 	//// Create a template relating drawing documents to their views
-	new wxDocTemplate(docManager, "Drawing", "*.sxe", "", "sxe",
+	new wxDocTemplate(docManager, "Sxe", "*.sxe", "", "sxe",
 		"Sxe Doc", "Sxe View", CLASSINFO(QSxeDoc), CLASSINFO(QSxeView));
-
 	
 	new wxDocTemplate(docManager, "Ppd", "*.ppd", "", "ppd",
 		"Ppd Doc", "Ppd View",	CLASSINFO(QPpdDoc), CLASSINFO(QPpdView));
@@ -52,6 +51,81 @@ bool cApp::OnInit()
 		wxSize(500, 400));
 
 	m_frame->Show();
+	docManager->CreateNewDocument();
 
 	return true;
+}
+
+wxFrame* cApp::CreateChildFrame(wxView* view, bool isCanvas)
+{
+	wxFrame* subframe = NULL;
+	wxDocument* doc = view->GetDocument();
+
+
+	subframe = new wxDocMDIChildFrame
+	(
+		doc,
+		view,
+		wxStaticCast(GetTopWindow(), wxDocMDIParentFrame),
+		wxID_ANY,
+		"Child Frame",
+		wxDefaultPosition,
+		wxSize(300, 300)
+	);
+
+
+	wxMenu* menuFile = new wxMenu;
+
+	menuFile->Append(wxID_NEW);
+	menuFile->Append(wxID_OPEN);
+	AppendDocumentFileCommands(menuFile, isCanvas);
+	menuFile->AppendSeparator();
+	menuFile->Append(wxID_EXIT);
+
+	wxMenu* menuEdit;
+
+	menuEdit = new wxMenu;
+	menuEdit->Append(wxID_COPY);
+	menuEdit->Append(wxID_PASTE);
+	menuEdit->Append(wxID_SELECTALL);
+
+
+	CreateMenuBarForFrame(subframe, menuFile, menuEdit);
+
+	subframe->SetIcon(isCanvas ? wxICON(chrt) : wxICON(notepad));
+
+	return subframe;
+
+}
+
+void cApp::CreateMenuBarForFrame(wxFrame* frame, wxMenu* file, wxMenu* edit)
+{
+	wxMenuBar* menubar = new wxMenuBar;
+
+	menubar->Append(file, wxGetStockLabel(wxID_FILE));
+
+	if (edit)
+		menubar->Append(edit, wxGetStockLabel(wxID_EDIT));
+
+	wxMenu* help = new wxMenu;
+	help->Append(wxID_ABOUT);
+	menubar->Append(help, wxGetStockLabel(wxID_HELP));
+
+	frame->SetMenuBar(menubar);
+}
+
+void cApp::AppendDocumentFileCommands(wxMenu* menu, bool supportsPrinting)
+{
+	menu->Append(wxID_CLOSE);
+	menu->Append(wxID_SAVE);
+	menu->Append(wxID_SAVEAS);
+	menu->Append(wxID_REVERT, _("Re&vert..."));
+
+	if (supportsPrinting)
+	{
+		menu->AppendSeparator();
+		menu->Append(wxID_PRINT);
+		menu->Append(wxID_PRINT_SETUP, "Print &Setup...");
+		menu->Append(wxID_PREVIEW);
+	}
 }
