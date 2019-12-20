@@ -21,12 +21,20 @@
   <ItemGroup>
     <ClCompile Include="cApp.cpp" />
     <ClCompile Include="cMain.cpp" />
+    <ClCompile Include="QPpdDoc.cpp" />
+    <ClCompile Include="QPpdView.cpp" />
+    <ClCompile Include="QPtbDoc.cpp" />
+    <ClCompile Include="QPtbView.cpp" />
     <ClCompile Include="QSxeDoc.cpp" />
     <ClCompile Include="QSxeView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cApp.h" />
     <ClInclude Include="cMain.h" />
+    <ClInclude Include="QPpdDoc.h" />
+    <ClInclude Include="QPpdView.h" />
+    <ClInclude Include="QPtbDoc.h" />
+    <ClInclude Include="QPtbView.h" />
     <ClInclude Include="QSxeDoc.h" />
     <ClInclude Include="QSxeView.h" />
   </ItemGroup>

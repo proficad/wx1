@@ -27,6 +27,18 @@
     <ClCompile Include="QSxeView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QPpdDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPtbDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPpdView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPtbView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cApp.h">
@@ -39,6 +51,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="QSxeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPpdDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPtbDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPpdView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPtbView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
