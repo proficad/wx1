@@ -1,10 +1,17 @@
 #include "cMain.h"
 
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
-	EVT_BUTTON(10001, OnButtonClicked)
+EVT_BUTTON(10001, OnButtonClicked)
 wxEND_EVENT_TABLE()
 
-cMain::cMain() : wxFrame(nullptr, wxID_ANY, "hola a todos")
+
+cMain::cMain(wxDocManager* manager,
+	wxFrame* parent,
+	wxWindowID 	id,
+	const wxString& title,
+	const wxPoint& pos,
+	const wxSize& size) 
+	: wxDocMDIParentFrame(manager, parent, id, title, pos, size)
 {
 	m_pBtn	= new wxButton(this, 10001, "click me", wxPoint(10, 10), wxSize(150, 50));
 	m_txt	= new wxTextCtrl(this, wxID_ANY, "", wxPoint(10, 70), wxSize(300, 30));
