@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cApp.cpp" />
-    <ClCompile Include="cMain.cpp" />
+    <ClCompile Include="MyApp.cpp" />
+    <ClCompile Include="MyMainFrame.cpp" />
     <ClCompile Include="QPpdDoc.cpp" />
     <ClCompile Include="QPpdView.cpp" />
     <ClCompile Include="QPtbDoc.cpp" />
@@ -29,8 +29,8 @@
     <ClCompile Include="QSxeView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cApp.h" />
-    <ClInclude Include="cMain.h" />
+    <ClInclude Include="MyApp.h" />
+    <ClInclude Include="MyMainFrame.h" />
     <ClInclude Include="QPpdDoc.h" />
     <ClInclude Include="QPpdView.h" />
     <ClInclude Include="QPtbDoc.h" />

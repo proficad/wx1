@@ -1,14 +1,14 @@
 #pragma once
 
 #include "wx/wx.h"
-#include "cMain.h"
+#include "MyMainFrame.h"
 
-class cApp : public wxApp
+class MyApp : public wxApp
 {
 
 public:
-	cApp();
-	~cApp();
+	MyApp();
+	~MyApp();
 
 	virtual bool OnInit() wxOVERRIDE;
 	virtual int OnExit() wxOVERRIDE;
@@ -17,12 +17,12 @@ public:
 
 
 private:
-	cMain* m_frame;
+	MyMainFrame* m_frame;
 
 	void CreateMenuBarForFrame(wxFrame* frame, wxMenu* file, wxMenu* edit);
 	void AppendDocumentFileCommands(wxMenu* menu, bool supportsPrinting);
 
 };
 
-wxDECLARE_APP(cApp);
+wxDECLARE_APP(MyApp);
 

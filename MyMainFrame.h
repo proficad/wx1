@@ -8,18 +8,21 @@
 #error You must set wxUSE_DOC_VIEW_ARCHITECTURE to 1 in setup.h!
 #endif
 
-class cMain : public wxDocMDIParentFrame
+class MyMainFrame : public wxDocMDIParentFrame
 {
 
 public:
-	cMain(wxDocManager* manager,
+	MyMainFrame(wxDocManager* manager,
 		wxFrame* parent,
 		wxWindowID 	id,
 		const wxString& title,
 		const wxPoint& pos = wxDefaultPosition,
 		const wxSize& size = wxDefaultSize);
 
-	~cMain();
+	// create main menu (shown when no document open)
+	void Create_Main_Menu();
+
+	~MyMainFrame();
 
 	wxButton* m_pBtn;
 	wxTextCtrl* m_txt;

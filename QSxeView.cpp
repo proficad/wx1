@@ -1,5 +1,5 @@
 #include "QSxeView.h"
-#include "cApp.h"
+#include "MyApp.h"
 #include "QSxeDoc.h"
 
 wxIMPLEMENT_DYNAMIC_CLASS(QSxeView, wxView);
@@ -10,7 +10,7 @@ bool QSxeView::OnCreate(wxDocument* doc, long flags) wxOVERRIDE
 		return false;
 
 
-	cApp& app = wxGetApp();
+	MyApp& app = wxGetApp();
 	wxFrame* frame = app.CreateChildFrame(this, true);
 	wxASSERT(frame == GetFrame());
 	//m_canvas = new MyCanvas(this);
@@ -19,6 +19,7 @@ bool QSxeView::OnCreate(wxDocument* doc, long flags) wxOVERRIDE
 
 	return true;
 }
+
 
 void QSxeView::OnDraw(wxDC* dc) wxOVERRIDE
 {
@@ -34,6 +35,7 @@ bool QSxeView::OnClose(bool deleteWindow /*= true*/) wxOVERRIDE
 	Activate(false);
 	return true;
 }
+
 
 QSxeDoc* QSxeView::GetDocument()
 {

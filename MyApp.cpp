@@ -1,4 +1,4 @@
-#include "cApp.h"
+#include "MyApp.h"
 
 #include "QSxeDoc.h"
 #include "QSxeView.h"
@@ -8,19 +8,19 @@
 #include "QPtbView.h"
 
 
-wxIMPLEMENT_APP(cApp);
+wxIMPLEMENT_APP(MyApp);
 
-cApp::cApp()
+MyApp::MyApp()
 {
 
 }
 
-cApp::~cApp()
+MyApp::~MyApp()
 {
 
 }
 
-bool cApp::OnInit()
+bool MyApp::OnInit()
 {
 	if (!wxApp::OnInit())
 	{
@@ -45,7 +45,7 @@ bool cApp::OnInit()
 		"Ptb Doc", "Ptb View",	CLASSINFO(QPtbDoc), CLASSINFO(QPtbView));
 
 
-	m_frame = new cMain(docManager, NULL, wxID_ANY,
+	m_frame = new MyMainFrame(docManager, NULL, wxID_ANY,
 		GetAppDisplayName(),
 		wxDefaultPosition,
 		wxSize(500, 400));
@@ -56,7 +56,7 @@ bool cApp::OnInit()
 	return true;
 }
 
-int cApp::OnExit() wxOVERRIDE
+int MyApp::OnExit() wxOVERRIDE
 {
 	wxDocManager* const manager = wxDocManager::GetDocumentManager();
 #if wxUSE_CONFIG
@@ -67,7 +67,7 @@ int cApp::OnExit() wxOVERRIDE
 	return wxApp::OnExit();
 }
 
-wxFrame* cApp::CreateChildFrame(wxView* view, bool isCanvas)
+wxFrame* MyApp::CreateChildFrame(wxView* view, bool isCanvas)
 {
 	wxFrame* subframe = NULL;
 	wxDocument* doc = view->GetDocument();
@@ -109,7 +109,7 @@ wxFrame* cApp::CreateChildFrame(wxView* view, bool isCanvas)
 
 }
 
-void cApp::CreateMenuBarForFrame(wxFrame* frame, wxMenu* file, wxMenu* edit)
+void MyApp::CreateMenuBarForFrame(wxFrame* frame, wxMenu* file, wxMenu* edit)
 {
 	wxMenuBar* menubar = new wxMenuBar;
 
@@ -125,7 +125,7 @@ void cApp::CreateMenuBarForFrame(wxFrame* frame, wxMenu* file, wxMenu* edit)
 	frame->SetMenuBar(menubar);
 }
 
-void cApp::AppendDocumentFileCommands(wxMenu* menu, bool supportsPrinting)
+void MyApp::AppendDocumentFileCommands(wxMenu* menu, bool supportsPrinting)
 {
 	menu->Append(wxID_CLOSE);
 	menu->Append(wxID_SAVE);
