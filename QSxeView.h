@@ -4,6 +4,7 @@
 #include "wx\docview.h"
 
 class QSxeDoc;
+class MyCanvas;
 
 class QSxeView :
 	public wxView
@@ -19,8 +20,10 @@ public:
 
 	QSxeDoc* GetDocument();
 
+
+
 private:
-//	MyCanvas* m_canvas;
+	MyCanvas* m_canvas;
 	wxDECLARE_DYNAMIC_CLASS(QSxeView);
 };
 
