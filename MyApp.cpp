@@ -35,7 +35,7 @@ bool MyApp::OnInit()
 	wxDocManager* docManager = new wxDocManager;
 
 	//// Create a template relating drawing documents to their views
-	new wxDocTemplate(docManager, "Sxe", "*.sxe", "", "sxe",
+	wxDocTemplate* l_template_sxe = new wxDocTemplate(docManager, "Sxe", "*.sxe", "", "sxe",
 		"Sxe Doc", "Sxe View", CLASSINFO(QSxeDoc), CLASSINFO(QSxeView));
 	
 	new wxDocTemplate(docManager, "Ppd", "*.ppd", "", "ppd",
@@ -51,7 +51,9 @@ bool MyApp::OnInit()
 		wxSize(500, 400));
 
 	m_frame->Show();
-	docManager->CreateNewDocument();
+	//docManager->CreateNewDocument();
+	
+	l_template_sxe->CreateDocument(wxString(), wxDOC_NEW);
 
 	return true;
 }
