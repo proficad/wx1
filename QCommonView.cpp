@@ -3,7 +3,6 @@
 #include "QSxeDoc.h"
 #include "MyCanvas.h"
 
-wxIMPLEMENT_DYNAMIC_CLASS(QCommonView, wxView);
 
 bool QCommonView::OnCreate(wxDocument* doc, long flags) wxOVERRIDE
 {
@@ -21,14 +20,17 @@ bool QCommonView::OnCreate(wxDocument* doc, long flags) wxOVERRIDE
 	return true;
 }
 
-
+/*
 void QCommonView::OnDraw(wxDC* dc) wxOVERRIDE
 {
+
+
 	wxPoint l_p1(100, 100);
 	wxCoord l_coord(20);
 	dc->DrawCircle(l_p1, l_coord);
-}
 
+}
+*/
 
 bool QCommonView::OnClose(bool deleteWindow /*= true*/) wxOVERRIDE
 {

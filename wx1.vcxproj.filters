@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e2a83e14-a943-4ee3-89e4-6188c3456988}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="QSxeDoc.cpp">
@@ -41,6 +44,24 @@
     </ClCompile>
     <ClCompile Include="QCommonView.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QSxeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QDocShared.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="QDocPpd.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="QCollectionPages.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="QDocPtb.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="QDocSxe.cpp">
+      <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +94,24 @@
     </ClInclude>
     <ClInclude Include="QCommonView.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QSxeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QDocShared.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="QDocPpd.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="QCollectionPages.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="QDocPtb.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="QDocSxe.h">
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

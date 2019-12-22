@@ -22,23 +22,35 @@
     <ClCompile Include="MyApp.cpp" />
     <ClCompile Include="MyCanvas.cpp" />
     <ClCompile Include="MyMainFrame.cpp" />
+    <ClCompile Include="QCollectionPages.cpp" />
+    <ClCompile Include="QDocPpd.cpp" />
+    <ClCompile Include="QDocPtb.cpp" />
+    <ClCompile Include="QDocShared.cpp" />
+    <ClCompile Include="QDocSxe.cpp" />
     <ClCompile Include="QPpdDoc.cpp" />
     <ClCompile Include="QPpdView.cpp" />
     <ClCompile Include="QPtbDoc.cpp" />
     <ClCompile Include="QPtbView.cpp" />
     <ClCompile Include="QSxeDoc.cpp" />
     <ClCompile Include="QCommonView.cpp" />
+    <ClCompile Include="QSxeView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyApp.h" />
     <ClInclude Include="MyCanvas.h" />
     <ClInclude Include="MyMainFrame.h" />
+    <ClInclude Include="QCollectionPages.h" />
+    <ClInclude Include="QDocPpd.h" />
+    <ClInclude Include="QDocPtb.h" />
+    <ClInclude Include="QDocShared.h" />
+    <ClInclude Include="QDocSxe.h" />
     <ClInclude Include="QPpdDoc.h" />
     <ClInclude Include="QPpdView.h" />
     <ClInclude Include="QPtbDoc.h" />
     <ClInclude Include="QPtbView.h" />
     <ClInclude Include="QSxeDoc.h" />
     <ClInclude Include="QCommonView.h" />
+    <ClInclude Include="QSxeView.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@ public:
 	//QSxeView() : wxView(), m_canvas(NULL) {}
 
 	virtual bool OnCreate(wxDocument* doc, long flags) wxOVERRIDE;
-	virtual void OnDraw(wxDC* dc) wxOVERRIDE;
+
 
 	virtual bool OnClose(bool deleteWindow = true) wxOVERRIDE;
 
@@ -24,6 +24,6 @@ public:
 
 private:
 	MyCanvas* m_canvas;
-	wxDECLARE_DYNAMIC_CLASS(QCommonView);
+
 };
 

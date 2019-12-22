@@ -3,5 +3,17 @@
 class QPtbDoc :
 	public wxDocument
 {
+
+
+
+
+
+
+
+
+
+
+
+	wxDECLARE_DYNAMIC_CLASS(QPtbDoc);
 };
 
