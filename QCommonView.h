@@ -6,7 +6,7 @@
 class QSxeDoc;
 class MyCanvas;
 
-class QSxeView :
+class QCommonView :
 	public wxView
 {
 
@@ -24,6 +24,6 @@ public:
 
 private:
 	MyCanvas* m_canvas;
-	wxDECLARE_DYNAMIC_CLASS(QSxeView);
+	wxDECLARE_DYNAMIC_CLASS(QCommonView);
 };
 

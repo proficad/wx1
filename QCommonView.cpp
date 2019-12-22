@@ -1,11 +1,11 @@
-#include "QSxeView.h"
+#include "QCommonView.h"
 #include "MyApp.h"
 #include "QSxeDoc.h"
 #include "MyCanvas.h"
 
-wxIMPLEMENT_DYNAMIC_CLASS(QSxeView, wxView);
+wxIMPLEMENT_DYNAMIC_CLASS(QCommonView, wxView);
 
-bool QSxeView::OnCreate(wxDocument* doc, long flags) wxOVERRIDE
+bool QCommonView::OnCreate(wxDocument* doc, long flags) wxOVERRIDE
 {
 	if (!wxView::OnCreate(doc, flags))
 		return false;
@@ -22,7 +22,7 @@ bool QSxeView::OnCreate(wxDocument* doc, long flags) wxOVERRIDE
 }
 
 
-void QSxeView::OnDraw(wxDC* dc) wxOVERRIDE
+void QCommonView::OnDraw(wxDC* dc) wxOVERRIDE
 {
 	wxPoint l_p1(100, 100);
 	wxCoord l_coord(20);
@@ -30,7 +30,7 @@ void QSxeView::OnDraw(wxDC* dc) wxOVERRIDE
 }
 
 
-bool QSxeView::OnClose(bool deleteWindow /*= true*/) wxOVERRIDE
+bool QCommonView::OnClose(bool deleteWindow /*= true*/) wxOVERRIDE
 {
 	if (!wxView::OnClose(deleteWindow))
 		return false;
@@ -40,7 +40,7 @@ bool QSxeView::OnClose(bool deleteWindow /*= true*/) wxOVERRIDE
 }
 
 
-QSxeDoc* QSxeView::GetDocument()
+QSxeDoc* QCommonView::GetDocument()
 {
 	return wxStaticCast(wxView::GetDocument(), QSxeDoc);
 }

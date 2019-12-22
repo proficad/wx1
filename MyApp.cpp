@@ -1,7 +1,7 @@
 #include "MyApp.h"
 
 #include "QSxeDoc.h"
-#include "QSxeView.h"
+#include "QCommonView.h"
 #include "QPpdDoc.h"
 #include "QPpdView.h"
 #include "QPtbDoc.h"
@@ -36,7 +36,7 @@ bool MyApp::OnInit()
 
 	//// Create a template relating drawing documents to their views
 	wxDocTemplate* l_template_sxe = new wxDocTemplate(docManager, "Sxe", "*.sxe", "", "sxe",
-		"Sxe Doc", "Sxe View", CLASSINFO(QSxeDoc), CLASSINFO(QSxeView));
+		"Sxe Doc", "Sxe View", CLASSINFO(QSxeDoc), CLASSINFO(QCommonView));
 	
 	new wxDocTemplate(docManager, "Ppd", "*.ppd", "", "ppd",
 		"Ppd Doc", "Ppd View",	CLASSINFO(QPpdDoc), CLASSINFO(QPpdView));

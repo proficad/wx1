@@ -27,7 +27,7 @@
     <ClCompile Include="QPtbDoc.cpp" />
     <ClCompile Include="QPtbView.cpp" />
     <ClCompile Include="QSxeDoc.cpp" />
-    <ClCompile Include="QSxeView.cpp" />
+    <ClCompile Include="QCommonView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyApp.h" />
@@ -38,7 +38,7 @@
     <ClInclude Include="QPtbDoc.h" />
     <ClInclude Include="QPtbView.h" />
     <ClInclude Include="QSxeDoc.h" />
-    <ClInclude Include="QSxeView.h" />
+    <ClInclude Include="QCommonView.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
