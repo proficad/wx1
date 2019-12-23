@@ -1,6 +1,7 @@
 #pragma once
 
 #include "wx\docview.h"
+#include "QDocPpd.h"
 
 class QPpdDoc :
 	public wxDocument
@@ -13,7 +14,8 @@ class QPpdDoc :
 
 
 
-
+private:
+	QDocPpd m_doc;
 
 
 	wxDECLARE_DYNAMIC_CLASS(QPpdDoc);
